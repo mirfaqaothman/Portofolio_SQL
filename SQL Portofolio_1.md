@@ -8,7 +8,7 @@ rename table people_50000 to people50k;
 
 select * from people50k;
 
-# ubah nama kolom yang namanya pake space diganti jadi pake '_-
+# ubah nama kolom yang namanya pake space diganti jadi pake '_'
 alter table people50k
 rename column `job title` to Job_Title;
 
@@ -65,16 +65,16 @@ WHERE YEAR(STR_TO_DATE(TTL, '%Y-%m-%d')) BETWEEN 1990 AND 2000;
 select `user id`, count(*) as Jumlah FROM people50k 
 GROUP BY `user id` HAVING count(*) > 1;
 
-# Menghapus duplasi dalam hasil query
+# Menghapus duplikat dalam hasil query
 select distinct user_id FROM people50k;
 
 select * from people50k;
 
-# Menampilkan orang dengan  yang bekerja sebagai techical  brewer
+# Menampilkan orang dengan  yang bekerja sebagai Techical Brewer
 select first_name, job_title FROM people50k
 WHERE job_title = 'Technical brewer';
 
-# Menghitung Jumlah orang yang bekerja sebagai Technicl Brewer
+# Menghitung Jumlah orang yang bekerja sebagai Techical Brewer
 select count(*) AS Jumlah_Pekerja_Technical_Brewer
 FROM people50k
 WHERE job_title = 'Technical Brewer';
