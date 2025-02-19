@@ -87,7 +87,7 @@ limit 20;
 select  first_name, job_tiTle
 FROM people50k
 LIMIT 10 OFFSET 15;
-# Menampilkan 10 orang pertama yang bekerja sebagai Technical Brewer
+# Menampilkan 10 orang pertama yang bekerja sebagai Techical Brewer
 select first_name, job_title FROM people50k
 Where Job_Title= 'Technical Brewer'
 LIMIT 10;
